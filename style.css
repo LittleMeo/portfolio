@@ -1,3 +1,43 @@
 body {
-    background-color: pink;
+    background-color: #222222;
+}
+
+a,
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF3C3C;
+    transition: 0.3s;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 18px;
+}
+
+.header__ico {
+    cursor: pointer;
+}
+
+.nav__list {
+    display: flex;
+    gap: 40px;
+}
+
+.nav__link {
+    color: #ffffff;
+    text-transform: uppercase;
+
 }
