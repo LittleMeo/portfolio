@@ -93,6 +93,10 @@ button {
     right: 20px;
 }
 
+.hero {
+    color: #ffffff;
+}
+
 @media (max-width: 1300px) {
     .nav__list {
         display: none;
