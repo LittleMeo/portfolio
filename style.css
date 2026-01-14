@@ -53,6 +53,7 @@ button {
 .nav__list {
     display: flex;
     gap: 40px;
+    padding: 20px;
 }
 
 .nav__link {
