@@ -1,5 +1,6 @@
 /* Oswald font import */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * {
     box-sizing: border-box;
@@ -93,8 +94,54 @@ button {
     right: 20px;
 }
 
+/* Hero section*/
+
 .hero {
     color: #ffffff;
+}
+
+.container__text {
+    font-family: 'Mulish';
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.container__statistic {
+    font-family: 'Oswald';
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.statistic__description {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hero__title {
+    font-family: 'Oswald';
+    font-size: 116px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.hero__description {
+    font-family: 'Oswald';
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.scroll__text {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hero__description {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 400;
 }
 
 @media (max-width: 1300px) {
