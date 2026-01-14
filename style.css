@@ -98,6 +98,12 @@ button {
 
 .hero {
     color: #ffffff;
+    padding: 60px 20px;
+}
+
+.hero__vertical {
+    writing-mode: vertical-rl;
+    display: flex;
 }
 
 .container__text {
