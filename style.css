@@ -1,5 +1,14 @@
+/* Oswald font import */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #222222;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 a,
@@ -21,14 +30,24 @@ li {
     list-style: none;
 }
 
+img {
+    display: block;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 20px 18px;
 }
 
 .header__ico {
     cursor: pointer;
+    display: block;
+    padding: 20px;
 }
 
 .nav__list {
@@ -39,5 +58,46 @@ li {
 .nav__link {
     color: #ffffff;
     text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
 
+.nav__burger {
+    display: none;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav__burger::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+}
+
+.nav__burger::before {
+    content: '';
+    width: 12px;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+@media (max-width: 1300px) {
+    .nav__list {
+        display: none;
+    }
+
+    .nav__burger {
+        display: block;
+    }
 }
