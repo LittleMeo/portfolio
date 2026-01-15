@@ -68,7 +68,7 @@ button {
 .nav__list {
     display: flex;
     gap: 40px;
-    padding: 20px;
+    padding: 18px 20px;
 }
 
 .nav__link {
@@ -125,6 +125,10 @@ button {
     justify-content: space-between;
     align-items: center;
     gap: 12px;
+    font-family: 'Mulish';
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px;
 }
 
 .container__line {
@@ -142,19 +146,24 @@ button {
 .hero__content {
     display: flex;
     flex-direction: column;
-    gap: 40px
+    gap: 40px;
+    padding: 78px 0 0 20px;
 }
 
 .hero__container {
     display: flex;
     gap: 60px;
+    padding: 16px 0 0 0;
+}
+
+.container__title {
+    height: 218px;
+    transform: rotate(180deg);
+    text-align: right;
 }
 
 .container__text {
-    font-family: 'Mulish';
-    font-size: 12px;
-    font-weight: 500;
-    height: 423px;
+    transform: rotate(180deg);
 }
 
 .container__statistic {
@@ -176,16 +185,30 @@ button {
     font-size: 116px;
     font-weight: 300;
     text-transform: uppercase;
+    line-height: 132px;
 }
 
 .hero__description {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Oswald';
+    font-weight: 400;
+}
+
+.hero__image-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image-card__description {
     font-family: 'Oswald';
     font-size: 20px;
     font-weight: 400;
-    text-transform: uppercase;
 }
 
-.hero__description {
+.image-card__description {
     font-family: 'Mulish';
     font-size: 16px;
     font-weight: 400;
