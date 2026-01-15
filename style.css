@@ -12,6 +12,16 @@ body {
     max-width: 1440px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
 a,
 a:active {
     text-decoration: none;
@@ -99,10 +109,32 @@ button {
 .hero {
     color: #ffffff;
     padding: 60px 20px;
+    display: flex;
+    height: calc(100vh - 60px);
 }
 
 .hero__vertical {
     writing-mode: vertical-rl;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.container__line {
+    height: 100%;
+}
+
+.container__line::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: wheat;
+    display: block;
+}
+
+.hero__content {
     display: flex;
 }
 
@@ -116,6 +148,8 @@ button {
     font-family: 'Oswald';
     font-size: 48px;
     font-weight: 300;
+    display: flex;
+    gap: 10px;
 }
 
 .statistic__description {
