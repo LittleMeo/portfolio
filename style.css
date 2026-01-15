@@ -23,8 +23,12 @@ h6 {
 }
 
 a,
-a:active {
+a:link,
+a:visited,
+a:active,
+a:focus {
     text-decoration: none;
+    color: #ffffff;
 }
 
 a:hover {
@@ -111,6 +115,7 @@ button {
     padding: 60px 20px;
     display: flex;
     height: calc(100vh - 60px);
+    gap: 40px;
 }
 
 .hero__vertical {
@@ -136,12 +141,20 @@ button {
 
 .hero__content {
     display: flex;
+    flex-direction: column;
+    gap: 40px
+}
+
+.hero__container {
+    display: flex;
+    gap: 60px;
 }
 
 .container__text {
     font-family: 'Mulish';
     font-size: 12px;
     font-weight: 500;
+    height: 423px;
 }
 
 .container__statistic {
@@ -172,17 +185,58 @@ button {
     text-transform: uppercase;
 }
 
+.hero__description {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hero__scroll {
+    display: flex;
+    gap: 15px;
+}
+
 .scroll__text {
     font-family: 'Mulish';
     font-size: 16px;
     font-weight: 400;
 }
 
-.hero__description {
-    font-family: 'Mulish';
-    font-size: 16px;
-    font-weight: 400;
+.scroll__arrow {
+    align-self: center;
+    background-color: #ffffff;
+    width: 3px;
+    height: 14px;
+    position: relative;
+    border-radius: 10px;
 }
+
+.scroll__arrow::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 9px;
+    background-color: #ffffff;
+    rotate: 45deg;
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    border-radius: 10px;
+}
+
+.scroll__arrow::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 9px;
+    background-color: #ffffff;
+    rotate: -45deg;
+    position: absolute;
+    top: 6px;
+    right: 3px;
+    border-radius: 10px;
+}
+
 
 @media (max-width: 1300px) {
     .nav__list {
