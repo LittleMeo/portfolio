@@ -203,20 +203,20 @@ button {
 }
 
 .image-card__description {
-    font-family: 'Oswald';
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.image-card__description {
     font-family: 'Mulish';
     font-size: 16px;
     font-weight: 400;
+    width: 230px;
+    text-align: end;
+    display: flex;
+    margin-left: auto;
+    line-height: 24px;
 }
 
 .hero__scroll {
     display: flex;
-    gap: 15px;
+    gap: 21px;
+    margin-top: auto;
 }
 
 .scroll__text {
@@ -260,6 +260,10 @@ button {
     border-radius: 10px;
 }
 
+.hero__img--small {
+    align-self: center;
+    padding: 0 0 0 52px;
+}
 
 @media (max-width: 1300px) {
     .nav__list {
