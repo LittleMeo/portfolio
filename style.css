@@ -311,11 +311,84 @@ button {
     }
 
     .hero__image-card {
-        width: 220px;
+        width: 30%;
         justify-content: start;
     }
 
     .image-card__description {
         padding: 272px 10px 0 0;
+    }
+}
+
+@media (max-width: 775px) {
+
+
+    .hero__content {
+        padding: 0;
+        width: 58%;
+    }
+}
+
+@media (max-width: 745px) {
+    .hero__vertical {
+        display: none;
+    }
+
+    .hero__title {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 615px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+
+    .hero__image-card {
+        gap: 60px;
+    }
+
+    .image-card__description {
+        padding: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero {
+        padding: 3px 18px;
+    }
+
+    .hero__content {
+        width: 100%;
+        gap: 35px;
+    }
+
+    .hero__container {
+        display: flex;
+        gap: 56px;
+        padding: 49px 0px 0 1px;
+    }
+
+    .hero__image-card {
+        width: 64%;
+        align-self: end;
+        gap: 58px;
+    }
+
+    .statistic__description {
+        width: 116px;
+    }
+
+    .hero__title {
+        line-height: 65px;
+        padding: 10px 0px 0px 3px;
+    }
+
+    .image-card__description {
+        padding: 0 11px 0 0px;
     }
 }
