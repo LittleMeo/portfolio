@@ -219,6 +219,13 @@ button {
     margin-top: auto;
 }
 
+.hero__scroll:hover .scroll__arrow,
+.hero__scroll:hover .scroll__arrow::after,
+.hero__scroll:hover .scroll__arrow::before {
+    background-color: red;
+    transition: 0.3s;
+}
+
 .scroll__text {
     font-family: 'Mulish';
     font-size: 16px;
