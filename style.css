@@ -275,7 +275,7 @@ button {
 /* About section */
 
 .about {
-    padding: 71px 20px;
+    padding: 60px 20px;
     background-color: #fff;
 }
 
@@ -288,19 +288,23 @@ button {
 .about__container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    
+    gap: 37px;
 }
 
 .about__container:nth-child(2) {
     flex-direction: column-reverse;
     justify-content: space-between;
+    gap: 0px;
+}
+
+.about__container:nth-child(3) {
+    gap: 40px;
 }
 
 .about__text {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 11px;
 }
 
 .about__title {
@@ -308,12 +312,18 @@ button {
     font-family: 'Oswald';
     font-size: 32px;
     font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.about__img:nth-child(2) {
+    padding: 0 0 54px 0;
 }
 
 .about__description {
     font-family: 'Mulish';
     font-size: 16px;
     font-weight: 400;
+    line-height: 24px;
 }
 
 @media (max-width: 1300px) {
