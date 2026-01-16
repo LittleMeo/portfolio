@@ -272,6 +272,50 @@ button {
     padding: 0 0 0 52px;
 }
 
+/* About section */
+
+.about {
+    padding: 71px 20px;
+    background-color: #fff;
+}
+
+.about__content {
+    color: #222222;
+    display: flex;
+    gap: 40px;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+
+.about__container:nth-child(2) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about__title {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about__description {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 400;
+}
+
 @media (max-width: 1300px) {
     .nav__list {
         display: none;
