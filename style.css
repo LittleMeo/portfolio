@@ -388,9 +388,22 @@ button {
 .slider__wrapper {
     width: 100%;
     display: grid;
-    grid: auto-flow / 1fr 1fr 1fr 1fr 1fr;
+    grid: auto-flow / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
-    transform: translate(-259px, 9px);
+    transform: translate(-1268px, 0px);
+}
+
+.card__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.card__wrapper--start {
+    align-items: start;
+}
+
+.card__wrapper--end {
+    align-items: end;
 }
 
 @media (max-width: 1380px) {
