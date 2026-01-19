@@ -114,8 +114,8 @@ button {
     color: #ffffff;
     padding: 60px 20px;
     display: flex;
-    height: calc(100vh - 60px);
-    gap: 40px;
+    height: calc(100vh - 50px);
+    gap: 38px;
 }
 
 .hero__vertical {
@@ -199,7 +199,19 @@ button {
     height: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.hero__image-card--small {
+    justify-content: center;
+}
+
+.hero__image-card--big {
     justify-content: space-between;
+}
+
+.hero__img {
+    width: 100%;
 }
 
 .image-card__description {
@@ -217,6 +229,13 @@ button {
     display: flex;
     gap: 21px;
     margin-top: auto;
+}
+
+.hero__scroll:hover .scroll__arrow,
+.hero__scroll:hover .scroll__arrow::after,
+.hero__scroll:hover .scroll__arrow::before {
+    background-color: red;
+    transition: 0.3s;
 }
 
 .scroll__text {
@@ -265,6 +284,76 @@ button {
     padding: 0 0 0 52px;
 }
 
+/* About section */
+
+.about {
+    padding: 60px 20px;
+    background-color: #fff;
+    max-width: 100%;
+}
+
+.about__content {
+    color: #222222;
+    display: grid;
+    grid: auto-flow / 1fr 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    height: auto;
+    max-width: 1440px;
+    min-width: 300px;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+
+.about__container:nth-child(2) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+.about__container:nth-child(3) {
+    gap: 40px;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.about__title {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.about__description {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.about__img {
+    width: 100%;
+}
+
+.about__container:nth-child(2) .about__img {
+    padding: 0 0 54px 0;
+}
+
+@media (max-width: 1380px) {
+    .hero__image-card--small {
+        display: none;
+    }
+}
+
 @media (max-width: 1300px) {
     .nav__list {
         display: none;
@@ -273,21 +362,15 @@ button {
     .nav__burger {
         display: block;
     }
-
-    .hero__img--small {
-        display: none;
-    }
-}
-
-@media (max-width: 1123px) {
-    .hero {
-        gap: 20px;
-    }
 }
 
 @media (max-width: 1107px) {
+    .hero {
+        gap: 34px;
+    }
+
     .hero__vertical {
-        height: 86.5%;
+        height: 98%;
     }
 
     .hero__content {
@@ -296,17 +379,21 @@ button {
     }
 
     .hero__container {
-        padding: 0;
+        padding: 0 27px 0px 0px;
     }
 
     .hero__title {
         font-size: 68px;
         line-height: 82px;
-        padding: 10px 0px 0 0;
+        padding: 10px 0px 0 36px;
+    }
+
+    .hero__description {
+        padding: 0px 60px 0 0px;
     }
 
     .hero__scroll {
-        padding: 132px 0 0px 0;
+        padding: 132px 256px 0px 0;
         margin-top: 0;
     }
 
@@ -318,14 +405,36 @@ button {
     .image-card__description {
         padding: 272px 10px 0 0;
     }
+
+    /* ABOUT section*/
+    .about {
+        padding: 61px 20px;
+    }
+
+    .about__content {
+        grid: auto-flow / 1fr;
+    }
+
+    .about__container:nth-child(2) {
+        gap: 40px;
+    }
+
+    .about__container:nth-child(2) .about__img {
+        padding: 0;
+    }
+
+    .about__container:nth-child(3)>.about__img {
+        display: none;
+    }
+
 }
 
 @media (max-width: 775px) {
-
-
     .hero__content {
-        padding: 0;
         width: 58%;
+        justify-content: center;
+        align-items: center;
+        padding: 75px 0 0 0;
     }
 }
 
@@ -342,6 +451,12 @@ button {
 @media (max-width: 615px) {
     .hero {
         flex-direction: column;
+        padding: 52px 20px;
+        gap: 20px;
+    }
+
+    .hero__content {
+        padding: 0;
     }
 
     .hero__scroll {
@@ -359,7 +474,7 @@ button {
 
 @media (max-width: 420px) {
     .hero {
-        padding: 3px 18px;
+        height: calc(100vh + 60px);
     }
 
     .hero__content {
@@ -369,12 +484,12 @@ button {
 
     .hero__container {
         display: flex;
-        gap: 56px;
-        padding: 49px 0px 0 1px;
+        gap: 53px;
+        padding: 0 0px 0 0px;
     }
 
     .hero__image-card {
-        width: 64%;
+        width: 65%;
         align-self: end;
         gap: 58px;
     }
@@ -385,7 +500,11 @@ button {
 
     .hero__title {
         line-height: 65px;
-        padding: 10px 0px 0px 3px;
+        padding: 8px 0px 0px 0px;
+    }
+
+    .hero__description {
+        padding: 1px 30px 0 0;
     }
 
     .image-card__description {
