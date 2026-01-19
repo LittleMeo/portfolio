@@ -382,6 +382,7 @@ button {
 
 .portfolio__slider {
     width: 100%;
+    overflow: hidden;
 }
 
 .slider__wrapper {
@@ -389,7 +390,7 @@ button {
     display: grid;
     grid: auto-flow / 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
-    overflow: hidden;
+    transform: translate(-259px, 9px);
 }
 
 @media (max-width: 1380px) {
