@@ -366,18 +366,21 @@ button {
     font-weight: 400;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
 .portfolio__title {
     text-transform: uppercase;
     font-family: 'Oswald';
     font-size: 32px;
+    line-height: 40px;
 }
 
 .portfolio__description {
     font-family: 'Mulish';
     font-size: 16px;
+    width: 350px;
+    line-height: 26px;
 }
 
 .portfolio__slider {
@@ -386,16 +389,37 @@ button {
 }
 
 .slider__wrapper {
+    position: relative;
     width: 100%;
     display: grid;
     grid: auto-flow / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
-    transform: translate(-1268px, 0px);
+    transform: translate(-1240px, 0px);
 }
 
 .card__wrapper {
     display: flex;
     align-items: center;
+}
+
+.card__wrapper:nth-child(4) {
+    transform: translate(0px, 0px);
+}
+
+.card__wrapper:nth-child(5) {
+    transform: translate(0px, 38px);
+}
+
+.card__wrapper:nth-child(6) {
+    transform: translate(0px, 58px);
+}
+
+.card__wrapper:nth-child(7) {
+    transform: translate(0px, -82px);
+}
+
+.card__wrapper:nth-child(8) {
+    transform: translate(0px, 118px);
 }
 
 .card__wrapper--start {
@@ -466,7 +490,7 @@ button {
 
     /* ABOUT section*/
     .about {
-        padding: 61px 20px;
+        padding: 40px 20px;
     }
 
     .about__content {
@@ -485,6 +509,30 @@ button {
         display: none;
     }
 
+    /* PORTFOLIO section*/
+    .portfolio {
+        padding: 82px 20px;
+    }
+
+    .card__wrapper:nth-child(4) {
+        transform: translate(-120px, 0px);
+    }
+
+    .card__wrapper:nth-child(5) {
+        transform: translate(-336px, 39px);
+    }
+
+    .card__wrapper:nth-child(6) {
+        transform: translate(-336px, 59px);
+    }
+
+    .card__wrapper:nth-child(7) {
+        transform: translate(-336px, -81px);
+    }
+
+    .card__wrapper:nth-child(8) {
+        transform: translate(-336px, 119px);
+    }
 }
 
 @media (max-width: 775px) {
@@ -525,8 +573,28 @@ button {
         gap: 60px;
     }
 
+    .about {
+        padding: 64px 20px;
+    }
+
     .image-card__description {
         padding: 0;
+    }
+
+    .portfolio {
+        padding: 54px 20px;
+    }
+
+    .card__wrapper:nth-child(5) {
+        transform: translate(-456px, 39px);
+    }
+
+    .card__wrapper:nth-child(6) {
+        transform: translate(-530px, 59px);
+    }
+
+    .card__wrapper:nth-child(7) {
+        transform: translate(-530px, -81px);
     }
 }
 
@@ -567,5 +635,9 @@ button {
 
     .image-card__description {
         padding: 0 11px 0 0px;
+    }
+
+    .portfolio__description {
+        width: 315px;
     }
 }
