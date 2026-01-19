@@ -348,6 +348,50 @@ button {
     padding: 0 0 54px 0;
 }
 
+/* PORTFOLIO section*/
+
+.portfolio {
+    background-color: #222222;
+    padding: 60px 20px;
+}
+
+.portfolio__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.portfolio__text {
+    color: #ffffff;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.portfolio__title {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-size: 32px;
+}
+
+.portfolio__description {
+    font-family: 'Mulish';
+    font-size: 16px;
+}
+
+.portfolio__slider {
+    width: 100%;
+}
+
+.slider__wrapper {
+    width: 100%;
+    display: grid;
+    grid: auto-flow / 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    overflow: hidden;
+}
+
 @media (max-width: 1380px) {
     .hero__image-card--small {
         display: none;
