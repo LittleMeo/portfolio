@@ -115,7 +115,7 @@ button {
     padding: 60px 20px;
     display: flex;
     height: calc(100vh - 50px);
-    gap: 40px;
+    gap: 38px;
 }
 
 .hero__vertical {
@@ -199,7 +199,19 @@ button {
     height: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.hero__image-card--small {
+    justify-content: center;
+}
+
+.hero__image-card--big {
     justify-content: space-between;
+}
+
+.hero__img {
+    width: 100%;
 }
 
 .image-card__description {
@@ -282,8 +294,13 @@ button {
 
 .about__content {
     color: #222222;
-    display: flex;
+    display: grid;
+    grid: auto-flow / 1fr 1fr 1fr;
     gap: 40px;
+    width: 100%;
+    height: auto;
+    max-width: 1440px;
+    min-width: 300px;
 }
 
 .about__container {
@@ -316,15 +333,19 @@ button {
     letter-spacing: -1px;
 }
 
-.about__container:nth-child(2) .about__img {
-    padding: 0 0 54px 0;
-}
-
 .about__description {
     font-family: 'Mulish';
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+}
+
+.about__img {
+    width: 100%;
+}
+
+.about__container:nth-child(2) .about__img {
+    padding: 0 0 54px 0;
 }
 
 @media (max-width: 1300px) {
