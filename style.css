@@ -573,8 +573,28 @@ button {
         gap: 60px;
     }
 
+    .about {
+        padding: 64px 20px;
+    }
+
     .image-card__description {
         padding: 0;
+    }
+
+    .portfolio {
+        padding: 54px 20px;
+    }
+
+    .card__wrapper:nth-child(5) {
+        transform: translate(-456px, 39px);
+    }
+
+    .card__wrapper:nth-child(6) {
+        transform: translate(-530px, 59px);
+    }
+
+    .card__wrapper:nth-child(7) {
+        transform: translate(-530px, -81px);
     }
 }
 
@@ -615,5 +635,9 @@ button {
 
     .image-card__description {
         padding: 0 11px 0 0px;
+    }
+
+    .portfolio__description {
+        width: 315px;
     }
 }
