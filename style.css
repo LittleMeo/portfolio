@@ -490,7 +490,7 @@ button {
 
     /* ABOUT section*/
     .about {
-        padding: 61px 20px;
+        padding: 40px 20px;
     }
 
     .about__content {
@@ -509,6 +509,30 @@ button {
         display: none;
     }
 
+    /* PORTFOLIO section*/
+    .portfolio {
+        padding: 82px 20px;
+    }
+
+    .card__wrapper:nth-child(4) {
+        transform: translate(-120px, 0px);
+    }
+
+    .card__wrapper:nth-child(5) {
+        transform: translate(-336px, 39px);
+    }
+
+    .card__wrapper:nth-child(6) {
+        transform: translate(-336px, 59px);
+    }
+
+    .card__wrapper:nth-child(7) {
+        transform: translate(-336px, -81px);
+    }
+
+    .card__wrapper:nth-child(8) {
+        transform: translate(-336px, 119px);
+    }
 }
 
 @media (max-width: 775px) {
