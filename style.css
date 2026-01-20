@@ -430,9 +430,126 @@ button {
     align-items: end;
 }
 
+/*PRICE section*/
+
+.price {
+    background-color: #fff;
+    padding: 174px 20px;
+}
+
+.price__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.price__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.price__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price__title {
+    font-family: 'Oswald';
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.price__description {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.price__card {
+    border: 1px solid #222222;
+    width: 320px;
+    height: 500px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card__title {
+    font-family: 'Oswald';
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card__list {
+    padding: 0px 0 0 11px;
+}
+
+.card__item {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    line-height: 27.5px;
+}
+
+.card__item::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #222222;
+    position: absolute;
+    top: 9px;
+    left: -12px;
+}
+
+.card__price {
+    font-family: 'Oswald';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card__label {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-style: italic;
+}
+
+.card__button {
+    width: 272px;
+    height: 60px;
+    background-color: #222222;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: -0.7px;
+}
+
 @media (max-width: 1380px) {
     .hero__image-card--small {
         display: none;
+    }
+
+    .price__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
@@ -552,6 +669,11 @@ button {
     .hero__title {
         font-size: 56px;
     }
+
+    .price__container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
 }
 
 @media (max-width: 615px) {
@@ -639,5 +761,13 @@ button {
 
     .portfolio__description {
         width: 315px;
+    }
+
+    .price {
+        padding: 179px 20px;
+    }
+
+    .price__content {
+        gap: 45px;
     }
 }
