@@ -438,7 +438,8 @@ button {
 }
 
 .price__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 
@@ -544,6 +545,11 @@ button {
 @media (max-width: 1380px) {
     .hero__image-card--small {
         display: none;
+    }
+
+    .price__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
@@ -663,6 +669,11 @@ button {
     .hero__title {
         font-size: 56px;
     }
+
+    .price__container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
 }
 
 @media (max-width: 615px) {
@@ -750,5 +761,13 @@ button {
 
     .portfolio__description {
         width: 315px;
+    }
+
+    .price {
+        padding: 179px 20px;
+    }
+
+    .price__content {
+        gap: 45px;
     }
 }
