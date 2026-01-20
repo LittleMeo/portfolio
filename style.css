@@ -781,8 +781,16 @@ button {
         padding: 75px 0 0 0;
     }
 
+    .price {
+        padding: 152px 20px 60px 20px;
+    }
+
+    .price__container {
+        padding: 0px 33px;
+    }
+
     .faq {
-        padding: 35px 0px;
+        padding: 59px 0px;
     }
 
     .answer__title::after {
