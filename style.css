@@ -758,12 +758,48 @@ button {
     }
 }
 
+@media (max-width: 850px) {
+    .faq__content {
+        flex-direction: column;
+        gap: 37px;
+    }
+
+    .faq__container {
+        padding: 0 20px;
+    }
+
+    .answer__container {
+        width: 100%;
+    }
+}
+
 @media (max-width: 775px) {
     .hero__content {
         width: 58%;
         justify-content: center;
         align-items: center;
         padding: 75px 0 0 0;
+    }
+
+    .faq {
+        padding: 35px 0px;
+    }
+
+    .answer__title::after {
+        top: 34px;
+        right: 25px;
+    }
+
+    .answer__item::before {
+        right: 24px;
+    }
+
+    .answer__item::after {
+        right: 24px;
+    }
+
+    .answer__line {
+        width: 97%;
     }
 }
 
