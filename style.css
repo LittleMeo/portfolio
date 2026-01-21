@@ -542,7 +542,7 @@ button {
     letter-spacing: -0.7px;
 }
 
-/* faq section*/
+/* FAQ section*/
 .faq {
     padding: 56px 20px;
 }
@@ -646,6 +646,83 @@ button {
     width: 100%;
     height: 1px;
     background-color: #fff;
+}
+
+/* FOOTER section*/
+.footer {
+    padding: 1px 0px;
+    background-color: #222222;
+}
+
+.footer__content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__title {
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 0 20px 0;
+    font-family: 'Oswald';
+    font-size: 16px;
+}
+
+.footer__input {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    width: 380px;
+    height: 60px;
+    font-size: 16px;
+    padding: 1px 0px 0px 9px;
+    font-family: 'Oswald';
+}
+
+.footer__input::placeholder {
+    color: #989898;
+    text-transform: uppercase;
+}
+
+.footer__button {
+    width: 200px;
+    height: 60px;
+    background-color: #222222;
+    color: #ffffff;
+    padding: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+
+.footer__button:hover {
+    color: #FF3C3C;
+    transition: 0.3s;
+}
+
+.footer__list {
+    font-family: 'Oswald';
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 38px;
+}
+
+.footer__item {
+    cursor: pointer;
 }
 
 @media (max-width: 1380px) {
