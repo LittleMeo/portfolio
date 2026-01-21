@@ -16,13 +16,13 @@
         </div>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="">About me</a></li>
-                <li class="nav__item"><a class="nav__link" href="">Portfolio</a></li>
-                <li class="nav__item"><a class="nav__link" href="">Price</a></li>
-                <li class="nav__item"><a class="nav__link" href="">Faq</a></li>
-                <li class="nav__item"><a class="nav__link" href="">Contacts</a></li>
+                <li class="nav__item"><a class="nav__link" href="#about">About me</a></li>
+                <li class="nav__item"><a class="nav__link" href="#portfolio">Portfolio</a></li>
+                <li class="nav__item"><a class="nav__link" href="#price">Price</a></li>
+                <li class="nav__item"><a class="nav__link" href="#faq">Faq</a></li>
+                <li class="nav__item"><a class="nav__link" href="#footer">Contacts</a></li>
             </ul>
-            <button class="nav__burger"></button>
+            <button class="nav__burger button"></button>
         </nav>
     </header>
     <section class="hero">
@@ -49,8 +49,8 @@
                 </div>
             </div>
             <h1 class="hero__title">Professional photographer</h1>
-            <h3 class="hero__description">Capture the Moment. Tell Your Story.</h3>
-            <a href="" class="hero__scroll">
+            <div class="hero__description">Capture the Moment. Tell Your Story.</div>
+            <a href="#faq" class="hero__scroll">
                 <div class="scroll__text">Scroll down</div>
                 <div class="scroll__arrow"></div>
             </a>
@@ -67,10 +67,10 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="about__content">
             <div class="about__container">
-                <img src="/assets/png/picture.png" class="about__img">
+                <img src="/assets/png/picture.png" class="about__img" alt="about__img">
                 <div class="about__text">
                     <div class="about__title">About Me</div>
                     <div class="about__description">Hi! I’m Vera, a photographer with 5 years of experience. For me,
@@ -79,18 +79,18 @@
                 </div>
             </div>
             <div class="about__container">
-                <img src="/assets/png/picture1.png" class="about__img">
+                <img src="/assets/png/picture1.png" class="about__img" alt="about__img">
                 <div class="about__description">I shoot all across Europe. I love natural light, genuine emotions, and
                     beautiful details. Each shot is a small piece of art. My goal is to create timeless images that tell
                     your unique story.</div>
             </div>
             <div class="about__container">
-                <img src="/assets/png/picture2.png" class="about__img">
+                <img src="/assets/png/picture2.png" class="about__img" alt="about__img">
                 <div class="about__description">Seeing with heart. Shooting with soul.</div>
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="portfolio__content">
             <div class="portfolio__text">
                 <div class="portfolio__title">my portfolio</div>
@@ -126,48 +126,49 @@
                     </div>
                     <div class="card__wrapper">
                         <div class="wrapper__card">
-                            <img class='slider__img' src="assets\png\slider6.png" alt="slider6.png">
+                            <img class='slider__img' src="./assets/png/slider6.png" alt="slider6.png">
                         </div>
                     </div>
                     <div class="card__wrapper">
                         <div class="wrapper__card card__wrapper--start">
-                            <img class='slider__img' src="assets\png\slider7.png" alt="slider7.png">
+                            <img class='slider__img' src="./assets/png/slider7.png" alt="slider7.png">
                         </div>
                     </div>
                     <div class="card__wrapper">
                         <div class="wrapper__card card__wrapper--end">
-                            <img class='slider__img' src="assets\png\slider8.png" alt="slider8.png">
+                            <img class='slider__img' src="./assets/png/slider8.png" alt="slider8.png">
                         </div>
                     </div>
                     <div class="card__wrapper">
                         <div class="wrapper__card">
-                            <img class='slider__img' src="assets\png\slider9.png" alt="slider9.png">
+                            <img class='slider__img' src="./assets/png/slider9.png" alt="slider9.png">
                         </div>
                     </div>
                     <div class="card__wrapper">
                         <div class="wrapper__card card__wrapper--start">
-                            <img class='slider__img' src="assets\png\slider10.png" alt="slider10.png">
+                            <img class='slider__img' src="./assets/png/slider10.png" alt="slider10.png">
                         </div>
                     </div>
                     <div class="card__wrapper">
                         <div class="wrapper__card">
-                            <img class='slider__img' src="assets\png\slider11.png" alt="slider11.png">
+                            <img class='slider__img' src="./assets/png/slider11.png" alt="slider11.png">
                         </div>
                     </div>
                     <div class="card__wrapper">
                         <div class="wrapper__card card__wrapper--start">
-                            <img class='slider__img' src="assets\png\slider12.png" alt="slider12.png">
+                            <img class='slider__img' src="./assets/png/slider12.png" alt="slider12.png">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="price">
+    <section class="price" id="price">
         <div class="price__content">
             <div class="price__text">
                 <div class="price__title">Packages & Pricing</div>
-                <div class="price__description">Choose the package that suits your story. All options are customizable to your needs.</div>
+                <div class="price__description">Choose the package that suits your story. All options are customizable
+                    to your needs.</div>
             </div>
             <div class="price__container">
                 <div class="price__card">
@@ -184,7 +185,7 @@
                     </div>
                     <div class="card__footer">
                         <div class="card__label">For short sessions and quick results</div>
-                        <button class="card__button"> book now</button>
+                        <button class="card__button button"> book now</button>
                     </div>
                 </div>
                 <div class="price__card">
@@ -203,7 +204,7 @@
                     </div>
                     <div class="card__footer">
                         <div class="card__label">Perfect for couples, portraits, or lifestyle</div>
-                        <button class="card__button"> book now</button>
+                        <button class="card__button button"> book now</button>
                     </div>
                 </div>
                 <div class="price__card">
@@ -223,7 +224,7 @@
                     </div>
                     <div class="card__footer">
                         <div class="card__label">For when you want to capture everything</div>
-                        <button class="card__button"> book now</button>
+                        <button class="card__button button"> book now</button>
                     </div>
                 </div>
                 <div class="price__card">
@@ -243,12 +244,103 @@
                     </div>
                     <div class="card__footer">
                         <div class="card__label">Full-day or partial wedding coverage</div>
-                        <button class="card__button"> book now</button>
+                        <button class="card__button button"> book now</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="faq" id="faq">
+        <div class="faq__content">
+            <div class="faq__container">
+                <div class="faq__title">Frequently Asked Questions</div>
+                <div class="faq__description">Everything You Wanted to Ask (and a Bit More)</div>
+            </div>
+            <div class="answer__container">
+                <div class="answer__title">How do I book a shoot?</div>
+                <div class="answer__description">Super simple – just message me through any convenient platform
+                    (Instagram, Telegram, WhatsApp, or the contact form on this site). We’ll discuss your preferred
+                    date, city, and session type. Once confirmed, I’ll reserve the date for you and send over
+                    preparation tips.</div>
+                <ul class="answer__list">
+                    <li class="answer__line"></li>
+                    <li>
+                        <a>
+                            <ol class="answer__item">
+                                <li>Can I choose the location myself?</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li class="answer__line"></li>
+                    <li>
+                        <a>
+                            <ol class="answer__item">
+                                <li>How long does the shoot take?</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li class="answer__line"></li>
+                    <li>
+                        <a>
+                            <ol class="answer__item">
+                                <li>When will I receive the photos?</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li class="answer__line"></li>
+                    <li>
+                        <a>
+                            <ol class="answer__item">
+                                <li>Will you help me pose?</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li class="answer__line"></li>
+                    <li>
+                        <a>
+                            <ol class="answer__item">
+                                <li>What should I wear?</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li class="answer__line"></li>
+                    <li>
+                        <a>
+                            <ol class="answer__item">
+                                <li>Do you retouch the photos?</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li class="answer__line"></li>
+                    <li>
+                        <a class="answer__item">
+                            <ol>
+                                <li>Can I get the raw files?</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li class="answer__line"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="footer__content">
+            <div class="footer__title">Like my portfolio? Sign up for a shoot!</div>
+            <div class="footer__container">
+                <input placeholder="your name" type="text" class="footer__input">
+                <input type="tel" value="+1" class="footer__input">
+                <div class="footer__button button">book now</div>
+            </div>
+        </div>
+        <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link">instagram</a></li>
+            <li class="footer__item"><a class="footer__link">telegram</a></li>
+            <li class="footer__item"><a class="footer__link">whatsapp</a></li>
+            <li class="footer__item"><a class="footer__link">Europe</a></li>
+            <li class="footer__item"><a class="footer__link">+1 234 9843572</a></li>
+        </ul>
+    </footer>
     <script src="./main.js"></script>
 </body>
 
