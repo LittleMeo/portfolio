@@ -676,6 +676,7 @@ button {
     padding: 0 0 20px 0;
     font-family: 'Oswald';
     font-size: 16px;
+    padding: 0 20px 20px;
 }
 
 .footer__input {
@@ -885,6 +886,19 @@ button {
 
     .answer__line {
         width: 97%;
+    }
+
+    .footer__content {
+        gap: 17px;
+    }
+
+    .footer__container {
+        padding: 0 20px 20px;
+    }
+
+    .footer__input {
+        padding: 0px 0px 0px 9px;
+        width: 35%;
     }
 }
 
