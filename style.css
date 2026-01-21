@@ -33,12 +33,6 @@ a:focus {
     cursor: pointer;
 }
 
-a:hover {
-    color: #FF3C3C;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
 ul,
 li,
 ol {
@@ -63,12 +57,6 @@ button {
     font-family: 'Oswald';
     font-size: 16px;
     cursor: pointer;
-}
-
-.button:hover {
-    background-color: #FF3C3C;
-    color: #222222;
-    transition: 0.3s;
 }
 
 .header {
@@ -246,13 +234,6 @@ button {
     display: flex;
     gap: 21px;
     margin-top: auto;
-}
-
-.hero__scroll:hover .scroll__arrow,
-.hero__scroll:hover .scroll__arrow::after,
-.hero__scroll:hover .scroll__arrow::before {
-    background-color: red;
-    transition: 0.3s;
 }
 
 .scroll__text {
@@ -495,19 +476,6 @@ button {
     justify-content: space-between;
 }
 
-.price__card:hover {
-    border: #FF3C3C 1px solid;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.price__card:hover .card__button {
-    background-color: #FF3C3C;
-    color: #222222;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
 .card__content {
     display: flex;
     flex-direction: column;
@@ -646,13 +614,6 @@ button {
     position: relative;
 }
 
-.answer__item:hover::after,
-.answer__item:hover::before
-{
-background-color: #FF3C3C;
-transition: 0.3s;
-}
-
 .answer__item::after {
     content: '';
     display: block;
@@ -732,11 +693,6 @@ transition: 0.3s;
     text-transform: uppercase;
 }
 
-.footer__input:hover {
-    border: #FF3C3C 1px solid;
-    transition: 0.3s;
-}
-
 .footer__button {
     width: 200px;
     height: 60px;
@@ -760,6 +716,52 @@ transition: 0.3s;
 
 .footer__item {
     cursor: pointer;
+}
+
+/* :hover effect */
+@media (hover: hover) {
+    a:hover {
+        color: #FF3C3C;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: #FF3C3C;
+        color: #222222;
+        transition: 0.3s;
+    }
+
+    .hero__scroll:hover .scroll__arrow,
+    .hero__scroll:hover .scroll__arrow::after,
+    .hero__scroll:hover .scroll__arrow::before {
+        background-color: red;
+        transition: 0.3s;
+    }
+
+    .price__card:hover {
+        border: #FF3C3C 1px solid;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .price__card:hover .card__button {
+        background-color: #FF3C3C;
+        color: #222222;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .answer__item:hover::after,
+    .answer__item:hover::before {
+        background-color: #FF3C3C;
+        transition: 0.3s;
+    }
+
+    .footer__input:hover {
+        border: #FF3C3C 1px solid;
+        transition: 0.3s;
+    }
 }
 
 @media (max-width: 1380px) {
