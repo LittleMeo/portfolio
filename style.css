@@ -29,6 +29,7 @@ a:active,
 a:focus {
     text-decoration: none;
     color: #ffffff;
+    cursor: pointer;
 }
 
 a:hover {
@@ -638,6 +639,13 @@ button {
 
 .answer__item {
     position: relative;
+}
+
+.answer__item:hover::after,
+.answer__item:hover::before
+{
+background-color: #FF3C3C;
+transition: 0.3s;
 }
 
 .answer__item::after {
