@@ -201,10 +201,10 @@ button {
 }
 
 .hero__image-card {
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
 }
 
 .hero__image-card--small {
@@ -764,8 +764,8 @@ button {
     }
 }
 
-@media (max-width: 1380px) {
-    .hero__image-card--small {
+@media (max-width: 1420px) {
+.hero__image-card--small {
         display: none;
     }
 
@@ -774,7 +774,6 @@ button {
         gap: 20px;
     }
 }
-
 @media (max-width: 1300px) {
     .nav__list {
         display: none;
