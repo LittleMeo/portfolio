@@ -1,6 +1,7 @@
 // querySelector
 const burgerMenu = document.querySelector('.nav__burger');
 const burgerBtn = document.querySelector('.nav__button');
+const burgerLink = document.querySelector('.burger__link');
 
 // functions
 const openBurger = () => {

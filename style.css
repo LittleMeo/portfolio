@@ -113,14 +113,14 @@ button {
 }
 
 .nav__burger {
-    display: block;
+    display: none;
     width: 100vw;
     height: 100vh;
     background-color: #222222;
-    transform: translate(-710px, -52px);
+    transform: translate(-710px, 0px);
     position: absolute;
     z-index: 1;
-}git 
+}
 
 .burger__list {
     display: flex;
