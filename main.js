@@ -2,7 +2,7 @@
 const burgerMenu = document.querySelector('.nav__burger');
 const burgerBtn = document.querySelector('.nav__button');
 const burgerLinks = document.querySelectorAll('.burger__link');
-const body = document.querySelector('.body')
+const body = document.querySelector('body')
 
 
 // FUNCTION
