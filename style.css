@@ -104,6 +104,7 @@ button {
     position: absolute;
     bottom: 25px;
     right: 20px;
+    transition: 0.3s;
 }
 
 .nav__button::before {
@@ -114,6 +115,20 @@ button {
     position: absolute;
     top: 25px;
     right: 20px;
+    transition: 0.3s;
+}
+
+.nav__burger--active.nav__button::after {
+    transform: translate(-50%) rotate(45deg);
+    transition: 0.3s;
+}
+
+.nav__burger--active.nav__button::before {
+    top: 33px;
+    right: 20px;
+    width: 20px;
+    transform: translate(-50%) rotate(120deg);
+    transition: 0.3s;
 }
 
 .nav__burger {
