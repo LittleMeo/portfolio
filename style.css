@@ -663,19 +663,8 @@ button {
     padding: 20px 0;
 }
 
-.answer__title::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 15.5px;
-    height: 1.5px;
-    background-color: #ffffff;
-    top: 34px;
-    right: 4px;
-    cursor: pointer;
-}
-
 .answer__description {
+    display: none;
     font-family: 'Mulish';
     font-size: 16px;
     width: 98%;
