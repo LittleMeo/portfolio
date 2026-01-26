@@ -117,9 +117,16 @@ button {
     width: 100vw;
     height: 100vh;
     background-color: #222222;
-    transform: translate(-710px, 0px);
+    transform: translate(100px, 0px);
     position: absolute;
     z-index: 1;
+    transition: 0.3s;
+}
+
+.burger__menu--active {
+    transform: translate(-710px, 0px);
+    display: block;
+    transition: 0.3s;
 }
 
 .burger__list {
@@ -743,8 +750,8 @@ button {
 @media (hover: hover) {
     a:hover {
         color: #FF3C3C;
-        transition: 0.3s;
         cursor: pointer;
+        transition: 0.3s;
     }
 
     .button:hover {
@@ -762,15 +769,15 @@ button {
 
     .price__card:hover {
         border: #FF3C3C 1px solid;
-        transition: 0.3s;
         cursor: pointer;
+        transition: 0.3s;
     }
 
     .price__card:hover .card__button {
         background-color: #FF3C3C;
         color: #222222;
-        transition: 0.3s;
         cursor: pointer;
+        transition: 0.3s;
     }
 
     .answer__item:hover::after,
@@ -793,16 +800,6 @@ button {
     .price__container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-    }
-}
-
-@media (max-width: 1300px) {
-    .nav__list {
-        display: none;
-    }
-
-    .nav__button {
-        display: block;
     }
 }
 
@@ -896,6 +893,14 @@ button {
 }
 
 @media (max-width: 850px) {
+    .nav__list {
+        display: none;
+    }
+
+    .nav__button {
+        display: block;
+    }
+
     .faq__content {
         flex-direction: column;
         gap: 37px;
