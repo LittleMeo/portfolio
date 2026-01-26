@@ -1,10 +1,10 @@
 // QUERY SELECTOR
-const burgerMenu = document.querySelector('.nav__burger');
-const burgerBtn = document.querySelector('.nav__button');
-const burgerLinks = document.querySelectorAll('.burger__link');
-const answerItems = document.querySelectorAll('.answer__item');
-const answerList = document.querySelector('.answer__list')
-const body = document.querySelector('body')
+const burgerMenu = document.querySelector(".nav__burger");
+const burgerBtn = document.querySelector(".nav__button");
+const burgerLinks = document.querySelectorAll(".burger__link");
+const answerItems = document.querySelectorAll(".answer__item");
+const answerList = document.querySelector(".answer__list");
+const body = document.querySelector("body");
 
 console.log(answerItems);
 
@@ -26,10 +26,14 @@ const burgerDisabled = () => {
 };
 
 const openAccordion = (item) => {
-  item.addEventListener('click', () => {
-    item.classList.add('accordion--active');
+  item.addEventListener("click", () => {
+    if (item.classList.contains("accordion--active")) {
+      item.classList.remove("accordion--active");
+    } else {
+      item.classList.add("accordion--active");
+    }
   });
-}
+};
 
 // lock scroll bar when open window
 const lockScroll = () => {
@@ -40,14 +44,11 @@ const lockScroll = () => {
   }
 };
 
-
 // ACTION
 
 // open and close burgerMenu
 burgerBtn.addEventListener("click", () => {
-  if (
-    burgerMenu.classList.contains("burger__menu--active")
-  ) {
+  if (burgerMenu.classList.contains("burger__menu--active")) {
     closeBurger();
     lockScroll();
     burgerDisabled();

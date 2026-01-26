@@ -674,6 +674,12 @@ button {
 
 .accordion--active .answer__description {
     display: block;
+    transition: 0.3s;
+}
+
+.accordion--active.answer__item::before {
+    display: none;
+    transition: 0.3s;
 }
 
 .answer__list {
