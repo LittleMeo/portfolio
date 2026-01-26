@@ -2,8 +2,11 @@
 const burgerMenu = document.querySelector('.nav__burger');
 const burgerBtn = document.querySelector('.nav__button');
 const burgerLinks = document.querySelectorAll('.burger__link');
+const answerItems = document.querySelectorAll('.answer__item');
+const answerList = document.querySelector('.answer__list')
 const body = document.querySelector('body')
 
+console.log(answerItems);
 
 // FUNCTION
 const openBurger = () => {
@@ -22,6 +25,12 @@ const burgerDisabled = () => {
   burgerBtn.classList.remove("nav__burger--active");
 };
 
+const openAccordion = (item) => {
+  item.addEventListener('click', () => {
+    item.classList.add('accordion--active');
+  });
+}
+
 // lock scroll bar when open window
 const lockScroll = () => {
   if (body.classList.contains("body--scroll-lock")) {
@@ -30,16 +39,6 @@ const lockScroll = () => {
     body.classList.add("body--scroll-lock");
   }
 };
-
-
-// close burgerMenu clicked on each nav-link
-burgerLinks.forEach((item) => {
-  item.addEventListener("click", () => {
-    closeBurger();
-    lockScroll();
-    burgerDisabled();
-  });
-});
 
 
 // ACTION
@@ -57,4 +56,19 @@ burgerBtn.addEventListener("click", () => {
     lockScroll();
     burgerActive();
   }
+});
+
+// close burgerMenu clicked on each nav-link
+burgerLinks.forEach((item) => {
+  item.addEventListener("click", () => {
+    closeBurger();
+    lockScroll();
+    burgerDisabled();
+  });
+});
+
+// open accordion
+
+answerItems.forEach((item) => {
+  openAccordion(item);
 });

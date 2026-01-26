@@ -672,6 +672,10 @@ button {
     line-height: 23px;
 }
 
+.accordion--active .answer__description {
+    display: block;
+}
+
 .answer__list {
     font-family: 'Oswald';
     font-size: 20px;
@@ -693,7 +697,7 @@ button {
     width: 15.5px;
     height: 1.5px;
     background-color: #ffffff;
-    top: 12px;
+    top: 35px;
     right: 3px;
     cursor: pointer;
 }
@@ -705,7 +709,7 @@ button {
     width: 15.5px;
     height: 1.5px;
     background-color: #ffffff;
-    top: 12px;
+    top: 35px;
     right: 3px;
     cursor: pointer;
     rotate: 90deg;
