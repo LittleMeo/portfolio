@@ -425,6 +425,48 @@ button {
 .portfolio__slider {
     width: 100%;
     overflow: hidden;
+    position: relative;
+}
+
+.slider__area {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slider__area--orange {
+    background-color: transparent;
+}
+
+.slider__area--orange:hover {
+    background-color: #F79A0F;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider__area--grey {
+    background-color: transparent;
+    width: 40%;
+    left: 30%;
+}
+
+.slider__area--grey:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #565656;
+    width: 40%;
+    left: 30%;
+}
+
+.slider__area--blue {
+    background-color: transparent;
+    left: 70%;
+}
+
+.slider__area--blue:hover {
+    background-color: #0F6CF7;
+    left: 70%;
 }
 
 .slider__wrapper {
