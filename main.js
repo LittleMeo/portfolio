@@ -6,8 +6,6 @@ const answerItems = document.querySelectorAll(".answer__item");
 const answerList = document.querySelector(".answer__list");
 const body = document.querySelector("body");
 
-console.log(answerItems);
-
 // FUNCTION
 const openBurger = () => {
   burgerMenu.classList.add("burger__menu--active");
@@ -72,4 +70,21 @@ burgerLinks.forEach((item) => {
 
 answerItems.forEach((item) => {
   openAccordion(item);
+});
+
+// TEST
+answerList.addEventListener("click", (event) => {
+  const clickedItem = event.target.closest(".answer__item");
+  const answerItems = document.querySelectorAll(".answer__item");
+
+  if (!clickedItem) {
+    return;
+  }
+
+  answerItems.forEach((item) => {
+    item.classList.remove('accordion--active');
+  });
+
+  clickedItem.classList.add('accordion--active');
+
 });
