@@ -37,6 +37,7 @@ burgerLinks.forEach((item) => {
   item.addEventListener("click", () => {
     closeBurger();
     lockScroll();
+    burgerDisabled();
   });
 });
 
