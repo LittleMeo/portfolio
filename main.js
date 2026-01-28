@@ -23,11 +23,16 @@ const burgerDisabled = () => {
   burgerBtn.classList.remove("nav__burger--active");
 };
 
-const openAccordion = (item) => {
+const openAccordion = (item, allItems) => {
+  const activeItem = item.classList.contains("accordion--active");
   item.addEventListener("click", () => {
-    if (item.classList.contains("accordion--active")) {
+    allItems.forEach(otherItems => {
+      otherItems.classList.remove("accordion--active");
+    })
+
+    if (activeItem) {
       item.classList.remove("accordion--active");
-    } else {
+    } else if (!activeItem) {
       item.classList.add("accordion--active");
     }
   });
@@ -69,22 +74,7 @@ burgerLinks.forEach((item) => {
 // open accordion
 
 answerItems.forEach((item) => {
-  openAccordion(item);
+  openAccordion(item, answerItems);
 });
 
 // TEST
-answerList.addEventListener("click", (event) => {
-  const clickedItem = event.target.closest(".answer__item");
-  const answerItems = document.querySelectorAll(".answer__item");
-
-  if (!clickedItem) {
-    return;
-  }
-
-  answerItems.forEach((item) => {
-    item.classList.remove('accordion--active');
-  });
-
-  clickedItem.classList.add('accordion--active');
-
-});
