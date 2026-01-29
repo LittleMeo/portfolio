@@ -22,7 +22,16 @@
                 <li class="nav__item"><a class="nav__link" href="#faq">Faq</a></li>
                 <li class="nav__item"><a class="nav__link" href="#footer">Contacts</a></li>
             </ul>
-            <button class="nav__burger button"></button>
+            <button class="nav__button button"></button>
+            <div class="nav__burger">
+                <ul class="burger__list">
+                    <li class="burger__item"><a class="burger__link" href="#about">About me</a></li>
+                    <li class="burger__item"><a class="burger__link" href="#portfolio">Portfolio</a></li>
+                    <li class="burger__item"><a class="burger__link" href="#price">Price</a></li>
+                    <li class="burger__item"><a class="burger__link" href="#faq">Faq</a></li>
+                    <li class="burger__item"><a class="burger__link" href="#footer">Contacts</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <section class="hero">
@@ -50,7 +59,7 @@
             </div>
             <h1 class="hero__title">Professional photographer</h1>
             <div class="hero__description">Capture the Moment. Tell Your Story.</div>
-            <a href="#faq" class="hero__scroll">
+            <a href="#about" class="hero__scroll">
                 <div class="scroll__text">Scroll down</div>
                 <div class="scroll__arrow"></div>
             </a>
@@ -98,6 +107,9 @@
                     family sessions, and more.</div>
             </div>
             <div class="portfolio__slider">
+                <div class="slider__area slider__area--orange"></div>
+                <div class="slider__area slider__area--grey"></div>
+                <div class="slider__area slider__area--blue"></div>
                 <div class="slider__wrapper ">
                     <div class="card__wrapper card__wrapper--end">
                         <div class="wrapper__card">
@@ -257,65 +269,100 @@
                 <div class="faq__description">Everything You Wanted to Ask (and a Bit More)</div>
             </div>
             <div class="answer__container">
-                <div class="answer__title">How do I book a shoot?</div>
-                <div class="answer__description">Super simple – just message me through any convenient platform
-                    (Instagram, Telegram, WhatsApp, or the contact form on this site). We’ll discuss your preferred
-                    date, city, and session type. Once confirmed, I’ll reserve the date for you and send over
-                    preparation tips.</div>
                 <ul class="answer__list">
-                    <li class="answer__line"></li>
                     <li>
                         <a>
-                            <ol class="answer__item">
-                                <li>Can I choose the location myself?</li>
+                            <ol class="answer__item accordion--active" data-active-accordion="1" data-unique="1">
+                                <li class="answer__title">How do I book a shoot?</li>
+                                <li class="answer__description">Super simple – just message me through any convenient
+                                    platform
+                                    (Instagram, Telegram, WhatsApp, or the contact form on this site). We’ll discuss
+                                    your preferred
+                                    date, city, and session type. Once confirmed, I’ll reserve the date for you and send
+                                    over
+                                    preparation tips.</li>
                             </ol>
                         </a>
                     </li>
                     <li class="answer__line"></li>
                     <li>
                         <a>
-                            <ol class="answer__item">
-                                <li>How long does the shoot take?</li>
+                            <ol class="answer__item" data-unique="2">
+                                <li class="answer__title">Can I choose the location myself?</li>
+                                <li class="answer__description">Absolutely! If there’s a special place you love or have
+                                    in mind — I’m happy to shoot there. If you’re unsure, I can suggest beautiful spots
+                                    with great lighting and atmosphere, tailored to your vision and mood.</li>
                             </ol>
                         </a>
                     </li>
                     <li class="answer__line"></li>
                     <li>
                         <a>
-                            <ol class="answer__item">
-                                <li>When will I receive the photos?</li>
+                            <ol class="answer__item" data-unique="3">
+                                <li class="answer__title">How long does the shoot take?</li>
+                                <li class="answer__description"> That depends on the package you choose. On average,
+                                    sessions last from 1 to 4 hours. We’ll plan the pace and type of shoot together —
+                                    from relaxed city strolls and love stories to more dynamic or editorial sessions.
+                                </li>
                             </ol>
                         </a>
                     </li>
                     <li class="answer__line"></li>
                     <li>
                         <a>
-                            <ol class="answer__item">
-                                <li>Will you help me pose?</li>
+                            <ol class="answer__item" data-unique="4">
+                                <li class="answer__title">When will I receive the photos?</li>
+                                <li class="answer__description">You’ll receive your edited photos within 7–14 days. For
+                                    event and wedding sessions — up to 30 days. I deliver them in a stylish online
+                                    gallery, where you can download them in full quality or easily share with friends
+                                    and family.</li>
                             </ol>
                         </a>
                     </li>
                     <li class="answer__line"></li>
                     <li>
                         <a>
-                            <ol class="answer__item">
-                                <li>What should I wear?</li>
+                            <ol class="answer__item" data-unique="5">
+                                <li class="answer__title">Will you help me pose?</li>
+                                <li class="answer__description">Definitely! I’ll guide you gently throughout the session
+                                    — where to look, how to move, how to relax. The goal is to make you feel comfortable
+                                    and natural. My approach is relaxed, and I’ll never force awkward poses. The result?
+                                    Real, expressive, and beautiful photos.</li>
                             </ol>
                         </a>
                     </li>
                     <li class="answer__line"></li>
                     <li>
                         <a>
-                            <ol class="answer__item">
-                                <li>Do you retouch the photos?</li>
+                            <ol class="answer__item" data-unique="6">
+                                <li class="answer__title">What should I wear?</li>
+                                <li class="answer__description">After booking, I’ll send you a style guide with
+                                    suggestions for colors, textures, and combinations. The most important thing is that
+                                    you feel confident in your outfit. I’m also happy to help you coordinate looks or
+                                    plan something cohesive for couples or groups.</li>
                             </ol>
                         </a>
                     </li>
                     <li class="answer__line"></li>
                     <li>
-                        <a class="answer__item">
-                            <ol>
-                                <li>Can I get the raw files?</li>
+                        <a>
+                            <ol class="answer__item" data-unique="7">
+                                <li class="answer__title">Do you retouch the photos?</li>
+                                <li class="answer__description"> Yes, all photos are color-corrected and lightly
+                                    retouched. My editing style is clean and natural — no overdone filters or fake skin.
+                                    Just you, at your best. Extra retouching is available upon request.</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li class="answer__line"></li>
+                    <li>
+                        <a>
+                            <ol class="answer__item" data-unique="8">
+                                <li class="answer__title">Can I get the raw files?</li>
+                                <li class="answer__description">I don’t deliver RAW files. My work includes not only
+                                    shooting, but also careful selection and editing to create a complete and polished
+                                    result. You’ll receive only the best images, ready for printing, sharing, or
+                                    publishing.</li>
                             </ol>
                         </a>
                     </li>
@@ -341,6 +388,20 @@
             <li class="footer__item"><a class="footer__link">+1 234 9843572</a></li>
         </ul>
     </footer>
+
+    <div class="modal__window">
+        <div class="window__overlay"></div>
+        <div class="window__main">
+            <div class="window__cross"></div>
+            <div class="modal__content">
+                <div class="window__title">Like my portfolio? Sign up for a shoot!</div>
+                <input placeholder="your name" type="text" class="footer__input">
+                <input type="tel" value="+1" class="footer__input">
+                <div class="footer__button button">book now</div>
+            </div>
+        </div>
+    </div>
+
     <script src="./main.js"></script>
 </body>
 

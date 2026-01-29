@@ -10,7 +10,10 @@
 body {
     background-color: #222222;
     margin: 0 auto;
-    max-width: 1440px;
+}
+
+.body--scroll-lock {
+    overflow: hidden;
 }
 
 h1,
@@ -83,7 +86,7 @@ button {
     font-size: 16px;
 }
 
-.nav__burger {
+.nav__button {
     display: none;
     position: relative;
     width: 60px;
@@ -93,7 +96,7 @@ button {
     cursor: pointer;
 }
 
-.nav__burger::after {
+.nav__button::after {
     content: '';
     width: 20px;
     height: 2px;
@@ -101,9 +104,10 @@ button {
     position: absolute;
     bottom: 25px;
     right: 20px;
+    transition: 0.3s;
 }
 
-.nav__burger::before {
+.nav__button::before {
     content: '';
     width: 12px;
     height: 2px;
@@ -111,6 +115,42 @@ button {
     position: absolute;
     top: 25px;
     right: 20px;
+    transition: 0.3s;
+}
+
+.nav__burger--active.nav__button::after {
+    transform: translate(-50%) rotate(45deg);
+    transition: 0.3s;
+}
+
+.nav__burger--active.nav__button::before {
+    top: 33px;
+    right: 20px;
+    width: 20px;
+    transform: translate(-50%) rotate(120deg);
+    transition: 0.3s;
+}
+
+.nav__burger {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+    transform: translate(100px, 0px);
+    position: fixed;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.burger__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-transform: uppercase;
 }
 
 /* Hero section*/
@@ -213,6 +253,7 @@ button {
 
 .hero__image-card--big {
     justify-content: space-between;
+    width: 280px;
 }
 
 .hero__img {
@@ -384,6 +425,48 @@ button {
 .portfolio__slider {
     width: 100%;
     overflow: hidden;
+    position: relative;
+}
+
+.slider__area {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slider__area--orange {
+    background-color: transparent;
+}
+
+.slider__area--orange:hover {
+    background-color: #F79A0F;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider__area--grey {
+    background-color: transparent;
+    width: 40%;
+    left: 30%;
+}
+
+.slider__area--grey:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #565656;
+    width: 40%;
+    left: 30%;
+}
+
+.slider__area--blue {
+    background-color: transparent;
+    left: 70%;
+}
+
+.slider__area--blue:hover {
+    background-color: #0F6CF7;
+    left: 70%;
 }
 
 .slider__wrapper {
@@ -539,6 +622,10 @@ button {
     cursor: pointer;
 }
 
+.modal--active .modal__window {
+    display: block;
+}
+
 /* FAQ section*/
 .faq {
     padding: 56px 20px;
@@ -580,24 +667,23 @@ button {
     padding: 20px 0;
 }
 
-.answer__title::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 15.5px;
-    height: 1.5px;
-    background-color: #ffffff;
-    top: 34px;
-    right: 4px;
-    cursor: pointer;
-}
-
 .answer__description {
+    display: none;
     font-family: 'Mulish';
     font-size: 16px;
     width: 98%;
     padding: 0px 0 20px 0;
     line-height: 23px;
+}
+
+.accordion--active .answer__description {
+    display: block;
+    transition: 0.3s;
+}
+
+.accordion--active.answer__item::before {
+    display: none;
+    transition: 0.3s;
 }
 
 .answer__list {
@@ -621,7 +707,7 @@ button {
     width: 15.5px;
     height: 1.5px;
     background-color: #ffffff;
-    top: 12px;
+    top: 35px;
     right: 3px;
     cursor: pointer;
 }
@@ -633,7 +719,7 @@ button {
     width: 15.5px;
     height: 1.5px;
     background-color: #ffffff;
-    top: 12px;
+    top: 35px;
     right: 3px;
     cursor: pointer;
     rotate: 90deg;
@@ -718,12 +804,83 @@ button {
     cursor: pointer;
 }
 
+/* modal window */
+.modal__window {
+    position: relative;
+    display: none;
+}
+
+.window__overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.window__main {
+    position: absolute;
+    width: 500px;
+    height: 356px;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -525%)
+}
+
+.window__cross {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 88%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.window__cross::after {
+    content: '';
+    width: 18px;
+    height: 2px;
+    display: block;
+    background-color: #222222;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    rotate: -45deg;
+}
+
+.window__cross::before {
+    content: '';
+    width: 18px;
+    height: 2px;
+    display: block;
+    background-color: #222222;
+    position: absolute;
+    top: 24px;
+    left: 25px;
+    rotate: 45deg;
+}
+
+.modal__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 0 20px 0;
+    font-family: 'Oswald';
+    font-size: 16px;
+    padding: 0 20px 20px;
+}
+
 /* :hover effect */
 @media (hover: hover) {
     a:hover {
         color: #FF3C3C;
-        transition: 0.3s;
         cursor: pointer;
+        transition: 0.3s;
     }
 
     .button:hover {
@@ -741,15 +898,15 @@ button {
 
     .price__card:hover {
         border: #FF3C3C 1px solid;
-        transition: 0.3s;
         cursor: pointer;
+        transition: 0.3s;
     }
 
     .price__card:hover .card__button {
         background-color: #FF3C3C;
         color: #222222;
-        transition: 0.3s;
         cursor: pointer;
+        transition: 0.3s;
     }
 
     .answer__item:hover::after,
@@ -765,22 +922,13 @@ button {
 }
 
 @media (max-width: 1420px) {
-.hero__image-card--small {
+    .hero__image-card--small {
         display: none;
     }
 
     .price__container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-    }
-}
-@media (max-width: 1300px) {
-    .nav__list {
-        display: none;
-    }
-
-    .nav__burger {
-        display: block;
     }
 }
 
@@ -874,6 +1022,14 @@ button {
 }
 
 @media (max-width: 850px) {
+    .nav__list {
+        display: none;
+    }
+
+    .nav__button {
+        display: block;
+    }
+
     .faq__content {
         flex-direction: column;
         gap: 37px;
@@ -889,6 +1045,16 @@ button {
 }
 
 @media (max-width: 820px) {
+    .nav__burger {
+        display: block;
+        transition: 0.3s;
+    }
+
+    .burger__menu--active {
+        transform: translate(-710px, 0px);
+        transition: 0.3s;
+    }
+
     .hero__content {
         width: 58%;
         justify-content: center;
