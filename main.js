@@ -1,9 +1,10 @@
 // QUERY SELECTOR
-const burgerMenu = document.querySelector('.nav__burger');
-const burgerBtn = document.querySelector('.nav__button');
-const burgerLinks = document.querySelectorAll('.burger__link');
-const body = document.querySelector('body')
-
+const burgerMenu = document.querySelector(".nav__burger");
+const burgerBtn = document.querySelector(".nav__button");
+const burgerLinks = document.querySelectorAll(".burger__link");
+const answerItems = document.querySelectorAll(".answer__item");
+const answerList = document.querySelector(".answer__list");
+const body = document.querySelector("body");
 
 // FUNCTION
 const openBurger = () => {
@@ -22,6 +23,47 @@ const burgerDisabled = () => {
   burgerBtn.classList.remove("nav__burger--active");
 };
 
+const openAccordion = (item, allItems) => {
+  
+  item.addEventListener("click", () => {
+    //close all accordionItems
+    closeAllAccordionItems(allItems);
+
+    //open one
+    openOneAccordionItem(item);
+
+    //save unique value in localStorage
+    saveUniqueLocal(item);
+  });
+};
+
+const closeAllAccordionItems = (allItems) => {
+  allItems.forEach((otherItems) => {
+    otherItems.classList.remove("accordion--active");
+    otherItems.dataset.activeAccordion = 0;
+  });
+};
+
+const openOneAccordionItem = (item) => {
+  const activeItem = item.classList.contains("accordion--active");
+  
+  item.dataset.activeAccordion = "1";
+
+  // console.log(window.localStorage.getItem("valueAccordion", item.dataset.activeAccordion));
+  // console.log(item.localStorage.getItem("value", "data-active-accordion"));
+
+  if (activeItem) {
+    item.classList.remove("accordion--active");
+  } else if (!activeItem) {
+    item.classList.add("accordion--active");
+  }
+};
+
+//save in localStorage
+const saveUniqueLocal = (item) => {
+  window.localStorage.setItem("uniqueID", item.dataset.unique);
+}
+
 // lock scroll bar when open window
 const lockScroll = () => {
   if (body.classList.contains("body--scroll-lock")) {
@@ -31,6 +73,20 @@ const lockScroll = () => {
   }
 };
 
+// ACTION
+
+// open and close burgerMenu
+burgerBtn.addEventListener("click", () => {
+  if (burgerMenu.classList.contains("burger__menu--active")) {
+    closeBurger();
+    lockScroll();
+    burgerDisabled();
+  } else {
+    openBurger();
+    lockScroll();
+    burgerActive();
+  }
+});
 
 // close burgerMenu clicked on each nav-link
 burgerLinks.forEach((item) => {
@@ -41,20 +97,26 @@ burgerLinks.forEach((item) => {
   });
 });
 
+// open accordion
 
-// ACTION
-
-// open and close burgerMenu
-burgerBtn.addEventListener("click", () => {
-  if (
-    burgerMenu.classList.contains("burger__menu--active")
-  ) {
-    closeBurger();
-    lockScroll();
-    burgerDisabled();
-  } else {
-    openBurger();
-    lockScroll();
-    burgerActive();
-  }
+answerItems.forEach((item) => {
+  openAccordion(item, answerItems);
 });
+
+// on window load
+window.addEventListener("load", (event) => {
+  answerItems.forEach((item, index) => {
+    // console.log(item.dataset.unique);
+    console.log(window.localStorage.getItem("uniqueID"));
+    console.log(index);
+    if (+index + 1  === +window.localStorage.getItem("uniqueID")) {
+      console.log('Meow');
+      closeAllAccordionItems(answerItems);
+      openOneAccordionItem(item);
+    } else {
+      console.log("err wrong dataset or index");
+    }
+  });
+});
+
+// TEST
