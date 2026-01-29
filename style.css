@@ -440,9 +440,10 @@ button {
 }
 
 .slider__area--orange:hover {
-    background-color: #F79A0F;
     cursor: pointer;
     transition: 0.3s;
+    background-color: #F79A0F;
+    opacity: 0.3;
 }
 
 .slider__area--grey {
@@ -454,9 +455,10 @@ button {
 .slider__area--grey:hover {
     cursor: pointer;
     transition: 0.3s;
-    background-color: #565656;
     width: 40%;
     left: 30%;
+    background-color: #565656;
+    opacity: 0.3;
 }
 
 .slider__area--blue {
@@ -466,7 +468,20 @@ button {
 
 .slider__area--blue:hover {
     background-color: #0F6CF7;
+    opacity: 0.3;
     left: 70%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider__area--orange:hover~.slider__wrapper {
+    transform: translate(10px, 0px);
+    transition: 3s;
+}
+
+.slider__area--blue:hover~.slider__wrapper {
+    transform: translate(-2400px, 0px);
+    transition: 3s;
 }
 
 .slider__wrapper {

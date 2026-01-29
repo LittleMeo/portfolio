@@ -4,10 +4,15 @@ const burgerBtn = document.querySelector(".nav__button");
 const burgerLinks = document.querySelectorAll(".burger__link");
 const answerItems = document.querySelectorAll(".answer__item");
 const answerList = document.querySelector(".answer__list");
-const cardButtons = document.querySelectorAll('.card__button');
-const overlay = document.querySelector('.window__overlay');
-const windowCross = document.querySelector('.window__cross');
+const cardButtons = document.querySelectorAll(".card__button");
+const overlay = document.querySelector(".window__overlay");
+const windowCross = document.querySelector(".window__cross");
+const sliderAreas = document.querySelectorAll(".slider__area");
+const sliderAreaOrange = document.querySelector('.slider__area--orange')
+const sliderAreaBlue = document.querySelector('.slider__area--blue')
 const body = document.querySelector("body");
+console.log(sliderAreaOrange.classList[1]);
+console.log(sliderAreaBlue.classList[1]);
 
 // FUNCTION
 const openBurger = () => {
@@ -27,7 +32,6 @@ const burgerDisabled = () => {
 };
 
 const openAccordion = (item, allItems) => {
-  
   item.addEventListener("click", () => {
     //close all accordionItems
     closeAllAccordionItems(allItems);
@@ -49,7 +53,7 @@ const closeAllAccordionItems = (allItems) => {
 
 const openOneAccordionItem = (item) => {
   const activeItem = item.classList.contains("accordion--active");
-  
+
   item.dataset.activeAccordion = "1";
 
   // console.log(window.localStorage.getItem("valueAccordion", item.dataset.activeAccordion));
@@ -65,7 +69,7 @@ const openOneAccordionItem = (item) => {
 //save in localStorage
 const saveUniqueLocal = (item) => {
   window.localStorage.setItem("uniqueID", item.dataset.unique);
-}
+};
 
 // lock scroll bar when open window
 const lockScroll = () => {
@@ -83,7 +87,7 @@ const toggleModalWindow = () => {
   } else {
     body.classList.add("modal--active");
   }
-}
+};
 
 // ACTION
 
@@ -118,7 +122,7 @@ answerItems.forEach((item) => {
 // on window load
 window.addEventListener("load", (event) => {
   answerItems.forEach((item, index) => {
-    if (+index + 1  === +window.localStorage.getItem("uniqueID")) {
+    if (+index + 1 === +window.localStorage.getItem("uniqueID")) {
       closeAllAccordionItems(answerItems);
       openOneAccordionItem(item);
     } else {
@@ -129,20 +133,20 @@ window.addEventListener("load", (event) => {
 // toggle Modal Window
 
 cardButtons.forEach((item) => {
-  item.addEventListener('click', () => {
+  item.addEventListener("click", () => {
     toggleModalWindow();
     lockScroll();
   });
 });
 
-overlay.addEventListener ('click', () => {
+overlay.addEventListener("click", () => {
   toggleModalWindow();
   lockScroll();
-})
+});
 
-windowCross.addEventListener('click', () => {
+windowCross.addEventListener("click", () => {
   toggleModalWindow();
   lockScroll();
-})
+});
 
 // TEST
