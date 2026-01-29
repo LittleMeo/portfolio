@@ -131,15 +131,18 @@ window.addEventListener("load", (event) => {
 cardButtons.forEach((item) => {
   item.addEventListener('click', () => {
     toggleModalWindow();
+    lockScroll();
   });
 });
 
 overlay.addEventListener ('click', () => {
   toggleModalWindow();
+  lockScroll();
 })
 
 windowCross.addEventListener('click', () => {
   toggleModalWindow();
+  lockScroll();
 })
 
 // TEST
