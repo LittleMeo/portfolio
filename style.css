@@ -622,6 +622,10 @@ button {
     cursor: pointer;
 }
 
+.modal--active .modal__window {
+    display: block;
+}
+
 /* FAQ section*/
 .faq {
     padding: 56px 20px;
@@ -825,7 +829,7 @@ button {
     transform: translate(-50%, -525%)
 }
 
-.main__cross {
+.window__cross {
     position: relative;
     width: 60px;
     height: 60px;
@@ -835,7 +839,7 @@ button {
     cursor: pointer;
 }
 
-.main__cross::after {
+.window__cross::after {
     content: '';
     width: 18px;
     height: 2px;
@@ -847,7 +851,7 @@ button {
     rotate: -45deg;
 }
 
-.main__cross::before {
+.window__cross::before {
     content: '';
     width: 18px;
     height: 2px;

@@ -4,6 +4,9 @@ const burgerBtn = document.querySelector(".nav__button");
 const burgerLinks = document.querySelectorAll(".burger__link");
 const answerItems = document.querySelectorAll(".answer__item");
 const answerList = document.querySelector(".answer__list");
+const cardButtons = document.querySelectorAll('.card__button');
+const overlay = document.querySelector('.window__overlay');
+const windowCross = document.querySelector('.window__cross');
 const body = document.querySelector("body");
 
 // FUNCTION
@@ -73,6 +76,15 @@ const lockScroll = () => {
   }
 };
 
+// toggle modal window
+const toggleModalWindow = () => {
+  if (body.classList.contains("modal--active")) {
+    body.classList.remove("modal--active");
+  } else {
+    body.classList.add("modal--active");
+  }
+}
+
 // ACTION
 
 // open and close burgerMenu
@@ -106,17 +118,28 @@ answerItems.forEach((item) => {
 // on window load
 window.addEventListener("load", (event) => {
   answerItems.forEach((item, index) => {
-    // console.log(item.dataset.unique);
-    console.log(window.localStorage.getItem("uniqueID"));
-    console.log(index);
     if (+index + 1  === +window.localStorage.getItem("uniqueID")) {
-      console.log('Meow');
       closeAllAccordionItems(answerItems);
       openOneAccordionItem(item);
     } else {
-      console.log("err wrong dataset or index");
     }
   });
 });
+
+// toggle Modal Window
+
+cardButtons.forEach((item) => {
+  item.addEventListener('click', () => {
+    toggleModalWindow();
+  });
+});
+
+overlay.addEventListener ('click', () => {
+  toggleModalWindow();
+})
+
+windowCross.addEventListener('click', () => {
+  toggleModalWindow();
+})
 
 // TEST
