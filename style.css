@@ -439,22 +439,8 @@ button {
     background-color: transparent;
 }
 
-.slider__area--orange:hover {
-    background-color: #F79A0F;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
 .slider__area--grey {
     background-color: transparent;
-    width: 40%;
-    left: 30%;
-}
-
-.slider__area--grey:hover {
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: #565656;
     width: 40%;
     left: 30%;
 }
@@ -464,18 +450,13 @@ button {
     left: 70%;
 }
 
-.slider__area--blue:hover {
-    background-color: #0F6CF7;
-    left: 70%;
-}
-
 .slider__wrapper {
     position: relative;
     width: 100%;
     display: grid;
     grid: auto-flow / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
-    transform: translate(-1240px, 0px);
+    transform: translate(var(--slider-translate-x, -1240px), 0px);
 }
 
 .card__wrapper {
@@ -620,6 +601,10 @@ button {
     color: #ffffff;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.modal--active .modal__window {
+    display: block;
 }
 
 /* FAQ section*/
@@ -825,7 +810,7 @@ button {
     transform: translate(-50%, -525%)
 }
 
-.main__cross {
+.window__cross {
     position: relative;
     width: 60px;
     height: 60px;
@@ -835,7 +820,7 @@ button {
     cursor: pointer;
 }
 
-.main__cross::after {
+.window__cross::after {
     content: '';
     width: 18px;
     height: 2px;
@@ -847,7 +832,7 @@ button {
     rotate: -45deg;
 }
 
-.main__cross::before {
+.window__cross::before {
     content: '';
     width: 18px;
     height: 2px;
@@ -914,6 +899,40 @@ button {
     .footer__input:hover {
         border: #FF3C3C 1px solid;
         transition: 0.3s;
+    }
+
+    .slider__area--orange:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        background-color: #F79A0F;
+        opacity: 0.3;
+    }
+
+    .slider__area--grey:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        width: 40%;
+        left: 30%;
+        background-color: #565656;
+        opacity: 0.3;
+    }
+
+    .slider__area--blue:hover {
+        background-color: #0F6CF7;
+        opacity: 0.3;
+        left: 70%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .slider__area--orange:hover~.slider__wrapper {
+        transform: translate(10px, 0px);
+        transition: 3s;
+    }
+
+    .slider__area--blue:hover~.slider__wrapper {
+        transform: translate(-2400px, 0px);
+        transition: 3s;
     }
 }
 
@@ -1264,5 +1283,9 @@ button {
 
     .answer__line {
         width: 95%;
+    }
+
+    .burger__menu--active {
+        transform: translate(-320px, 0px);
     }
 }
