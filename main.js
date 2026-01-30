@@ -8,11 +8,33 @@ const cardButtons = document.querySelectorAll(".card__button");
 const overlay = document.querySelector(".window__overlay");
 const windowCross = document.querySelector(".window__cross");
 const sliderAreas = document.querySelectorAll(".slider__area");
-const sliderAreaOrange = document.querySelector('.slider__area--orange')
-const sliderAreaBlue = document.querySelector('.slider__area--blue')
+const sliderAreaOrange = document.querySelector(".slider__area--orange");
+const sliderAreaBlue = document.querySelector(".slider__area--blue");
+const sliderWrapper = document.querySelector(".slider__wrapper");
+const transformSlider = document.querySelector("--slider-translate-x");
 const body = document.querySelector("body");
-console.log(sliderAreaOrange.classList[1]);
-console.log(sliderAreaBlue.classList[1]);
+
+// TEST
+// const computed = window.getComputedStyle(sliderWrapper);
+// const computedTransform = computed.transform;
+// const matrix = computedTransform.match(/^matrix\((.+)\)$/);
+const translateX = getComputedStyle(sliderWrapper);
+console.log(sliderWrapper.style);
+console.log(transformSlider);
+
+console.log(translateX.transform);
+console.log(translateX.getPropertyValue("--slider-translate-x"));
+
+const parseMatrix = () => {
+  const values = matrix[1].split(", ");
+  return parseFloat(values[4]);
+};
+
+// setTimeout
+// console.log(sliderAreaBlue.classList[1]);
+// console.log(sliderAreaOrange.classList[1]);
+
+// TEST
 
 // FUNCTION
 const openBurger = () => {
@@ -89,6 +111,9 @@ const toggleModalWindow = () => {
   }
 };
 
+// touch left side
+const leftSwipeWrapper = () => {};
+leftSwipeWrapper();
 // ACTION
 
 // open and close burgerMenu
@@ -148,5 +173,7 @@ windowCross.addEventListener("click", () => {
   toggleModalWindow();
   lockScroll();
 });
+
+// mobile touch hover
 
 // TEST

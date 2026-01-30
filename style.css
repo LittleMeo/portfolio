@@ -439,49 +439,15 @@ button {
     background-color: transparent;
 }
 
-.slider__area--orange:hover {
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: #F79A0F;
-    opacity: 0.3;
-}
-
 .slider__area--grey {
     background-color: transparent;
     width: 40%;
     left: 30%;
 }
 
-.slider__area--grey:hover {
-    cursor: pointer;
-    transition: 0.3s;
-    width: 40%;
-    left: 30%;
-    background-color: #565656;
-    opacity: 0.3;
-}
-
 .slider__area--blue {
     background-color: transparent;
     left: 70%;
-}
-
-.slider__area--blue:hover {
-    background-color: #0F6CF7;
-    opacity: 0.3;
-    left: 70%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.slider__area--orange:hover~.slider__wrapper {
-    transform: translate(10px, 0px);
-    transition: 3s;
-}
-
-.slider__area--blue:hover~.slider__wrapper {
-    transform: translate(-2400px, 0px);
-    transition: 3s;
 }
 
 .slider__wrapper {
@@ -490,7 +456,7 @@ button {
     display: grid;
     grid: auto-flow / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
-    transform: translate(-1240px, 0px);
+    transform: translate(var(--slider-translate-x, -1240px), 0px);
 }
 
 .card__wrapper {
@@ -934,6 +900,40 @@ button {
         border: #FF3C3C 1px solid;
         transition: 0.3s;
     }
+
+    .slider__area--orange:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        background-color: #F79A0F;
+        opacity: 0.3;
+    }
+
+    .slider__area--grey:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        width: 40%;
+        left: 30%;
+        background-color: #565656;
+        opacity: 0.3;
+    }
+
+    .slider__area--blue:hover {
+        background-color: #0F6CF7;
+        opacity: 0.3;
+        left: 70%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .slider__area--orange:hover~.slider__wrapper {
+        transform: translate(10px, 0px);
+        transition: 3s;
+    }
+
+    .slider__area--blue:hover~.slider__wrapper {
+        transform: translate(-2400px, 0px);
+        transition: 3s;
+    }
 }
 
 @media (max-width: 1420px) {
@@ -1283,5 +1283,9 @@ button {
 
     .answer__line {
         width: 95%;
+    }
+
+    .burger__menu--active {
+        transform: translate(-320px, 0px);
     }
 }
